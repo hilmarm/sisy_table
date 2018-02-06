@@ -1,25 +1,6 @@
-from table_solver import TableSolver
-from draw_table import DrawTable
-from parse_programm import ParseProgramm
-import random
+from parse_program import ParseProgramm
 
-def main():
-    A = [[0,2], [1,3], [9,10], [4,8], [6,10], [2,6]]
-	
-    A = []
-
-    N =6
-    for i in range(N):
-    	mid = random.randint(1,N-2)
-    	A.append([mid, mid+random.randint(1,4)])
-
-    solver = TableSolver(A, 1000)
-    solver.SolveMIP()
-
-    drawer = DrawTable(A, [x.solution_value() for x in solver.vars])
-    drawer.draw_table()
-
-    my_str = """
+my_str = """
 <!--	
 		<p>
 			SISYPHON #5 RELEASE PARTY:<br/>
@@ -62,7 +43,3 @@ def main():
 			FEUERSHOW VON ENTOURAGE BERLIN // sonntag ab 18 uhr
 		</p>		
 -->"""
-
-
-if __name__ == '__main__':
-  main()
