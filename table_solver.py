@@ -38,7 +38,7 @@ class TableSolver(object):
 
         objective = self.solver.Objective()
         for i in range(N):
-            objective.SetCoefficient(self.vars[i], 3*self.A[i][1]-self.A[i][0])
+            objective.SetCoefficient(self.vars[i], self.A[i][1]-self.A[i][0])
             print('A = {}'.format(self.A[i]))
             print('set variable {} coefficient to {}'.format(self.vars[i], self.A[i][1]-self.A[i][0]))
         objective.SetMinimization()
@@ -63,6 +63,7 @@ class TableSolver(object):
 
         for variable in self.vars:
           print('%s = %d' % (variable.name(), variable.solution_value()))
+        print('Objective value is {}'.format(self.solver.Objective().Value()))
 
 
     def intersect(self, a, b):
