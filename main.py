@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from table_solver import TableSolver
 from draw_table import DrawTable
 from parse_programm import ParseProgramm as PP
@@ -23,6 +25,8 @@ def main():
 
     pp = PP()
     pp.read_table('input/programm_example')
+    pp.print_table()
+    pp.parse_timetable()
     pp.print_table()
 
 if __name__ == '__main__':
