@@ -8,7 +8,9 @@ import random
 def main():
     # A = [[0,2], [1,3], [9,10], [4,8], [6,10], [2,6]]
 
-    pp = PP('input/programm_example')
+    my_input = 'input/programm_example'
+
+    pp = PP(my_input)
     pp.run()
 
     A = []
