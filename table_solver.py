@@ -27,40 +27,29 @@ class TableSolver(object):
         constr_count = 0
         for i in range(N-1):
             for j in range(i+1, N):
-                print('i,j = {},{}'.format(i,j))
                 if inter[i][j]==1:
                     self.add_constraint(self.vars[j], self.vars[i], self.vars[N+constr_count-1], self.solver)
                     constr_count += 1
-                    print('conastraints added')
-                    print(self.vars[j])
-                    print(self.vars[i])
-                    print(self.vars[N+constr_count-1])
 
         objective = self.solver.Objective()
         for i in range(N):
             objective.SetCoefficient(self.vars[i], self.A[i][1]-self.A[i][0])
-            print('A = {}'.format(self.A[i]))
-            print('set variable {} coefficient to {}'.format(self.vars[i], self.A[i][1]-self.A[i][0]))
         objective.SetMinimization()
 
         """Solve the problem and print the solution."""
         result_status = self.solver.Solve()
         # The problem has an optimal solution.
         print(result_status)
-        #assert result_status == pywraplp.Solver.OPTIMAL
+        assert result_status == pywraplp.Solver.OPTIMAL
 
         # The solution looks legit (when using solvers other than
         # GLOP_LINEAR_PROGRAMMING, verifying the solution is highly recommended!).
         #
-        #assert self.solver.VerifySolution(1e-9, True)
+        assert self.solver.VerifySolution(1e-9, True)
         print('Number of variables =', self.solver.NumVariables())
         print('Number of constraints =', self.solver.NumConstraints())
 
-        # The objective value of the solution.
-        #print('Optimal objective value = %d' % solver.Objective().Value())
-        print()
         # The value of each variable in the solution.
-
         for variable in self.vars:
           print('%s = %d' % (variable.name(), variable.solution_value()))
         print('Objective value is {}'.format(self.solver.Objective().Value()))

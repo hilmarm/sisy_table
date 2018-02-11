@@ -19,23 +19,18 @@ class DrawTable(object):
         print(self.max)
 
     def draw_table(self):
-        # Fixing random state for reproducibility
 
-        
-        # plt.axis([0,4, 0,10])
-        # ax = plt.gca()
-        # ax.set_autoscale_on(False)
-        fig = plt.figure(figsize=(25,5))
+        fig = plt.figure(figsize=(7,25))
         ax = fig.add_subplot(111)
         pts = []
         for i in range(len(self.A)):
             dj = self.pp.artists[i].name_utf
             time = self.pp.artists[i].sisy_time
             # Set DJ time slot boxes
-            x = self.A[i][0]
-            y = self.vars[i]
-            w = self.A[i][1]-self.A[i][0]
-            h = 1
+            y = self.A[i][0]
+            x = 2*self.vars[i]
+            h = self.A[i][1]-self.A[i][0]
+            w = 2
             # Generate random color
             r = lambda: random.randint(0,255)
             color = '#%02X%02X%02X' % (r(),r(),r())
@@ -51,28 +46,23 @@ class DrawTable(object):
                     alpha=0.3
                 )
             )
-            centerx = x + w/6.0
-            centery = y + 2.0/3.0 # obviously use a different formula for different shapes
-            plt.text(centerx, centery, dj, fontsize=7)
-            plt.text(centerx, centery - 0.5, time, fontsize=7)
+            centerx = x + 1.0/5.0
+            if h == 1:
+                centery = y + 0.3
+                fontsize = 7
+                plt.text(centerx, centery, dj, fontsize=fontsize)
+                plt.text(centerx+0.8, centery, time, fontsize=fontsize)
+            else:
+                centery = y + w # obviously use a different formula for different shapes
+                plt.text(centerx, centery, dj, fontsize=7)
+                plt.text(centerx, centery - 0.5, time, fontsize=7)
+
             print("A = ({},{})".format(self.A[i][0], self.A[i][1]))
             print("self.vars[i] = {}".format(self.vars[i]))
-            # patches.Rectangle(
-            #     (0.26, 0.1), 0.2, 0.6,
-            #     facecolor="none"     # No background
-            # ),
-            # patches.Rectangle(
-            #     (0.49, 0.1), 0.2, 0.6,
-            #     facecolor="red"
-            # ),
-            # patches.Rectangle(
-            #     (0.72, 0.1), 0.2, 0.6,
-            #     facecolor="#00ffff"
-            # )
+   
         for p in pts:
-            print(p)
             ax.add_patch(p)
-        plt.axis([self.min, self.max, 0,6])
+        plt.axis([0, 8, self.min, self.max])
         ax.set_autoscale_on(False)
         plt.tight_layout(True)
         #plt.savefig('exported/foo.png', bbox_inches='tight')
