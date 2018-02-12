@@ -16,3 +16,6 @@ The program takes a text file (example in input/programm_example) as input, pars
 In order to run the program simply add the relative path to your input file in main.py, and run:
 
 *python main.py
+
+
+![Output image from the program example](exported/example.png?raw=true "Sisyphos parsed program")
