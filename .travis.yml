@@ -1,0 +1,11 @@
+language: python
+python:
+    - "2.7"
+install: 
+    - pip install .
+    - pip install simpy
+    - pip install codecov
+script:
+    - coverage run tests/all.py
+# after_success:
+#     - codecov
