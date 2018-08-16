@@ -24,7 +24,9 @@ class ParseProgramm(object):
 		text_file = open(self.filename, "r")
 		lines = text_file.readlines()
 
-		reg = '\s*(.*)// (.*)\[(.*)\s(.*)-(.*)\]<br/>'
+		reg = '\s*(.*)// (.*)\[(.*)\s(.*)-(.*)\]<br />'
+
+		# Some programs have a space added after '<br'
 		for line in lines:
 			a = re.match(reg, line)
 			if a:
