@@ -99,7 +99,8 @@ class CreateTimetable(object):
 
 
     def post_day_string(self):
-        return '</article> </div> </body> </html>'
+        bottom_msg = 'To see how this timetable was generated please visit <a href="https://www.github.com/hilmarm/sisy_table">github.com/hilmarm/sisy_table</a>. The layout was taken from the running order of <a href="https://meltfestival.de/en/runningorder/">Melt Festival</a> which is powered by <a href="http://piklist.com/">Piklist</a>.'
+        return '</article> </div> {} </body> </html>'.format(bottom_msg)
 
 
     def export_day_html(self, day, day_code):
