@@ -1,14 +1,7 @@
-var timetable2 = new Timetable();
-timetable2.setScope(0,23)
-timetable2.addLocations(['Wintergarten', 'Hammerhalle', 'Dampfer']);
-timetable2.addEvent('CHRISTIAN VOLDSTAD ', 'Wintergarten', new Date(2015,7,17,8,00), new Date(2015,7,17,11,00), { url: '#' });
-timetable2.addEvent('ESTHER DUIJN ', 'Dampfer', new Date(2015,7,17,7,00), new Date(2015,7,17,10,00), { url: '#' });
-timetable2.addEvent('FREDEVERYTHING ', 'Wintergarten', new Date(2015,7,17,4,00), new Date(2015,7,17,8,00), { url: '#' });
-timetable2.addEvent('HACHE ', 'Hammerhalle', new Date(2015,7,17,4,00), new Date(2015,7,17,7,00), { url: '#' });
-timetable2.addEvent('KANT ', 'Wintergarten', new Date(2015,7,17,18,00), new Date(2015,7,17,22,00), { url: '#' });
-timetable2.addEvent('MONTY ', 'Hammerhalle', new Date(2015,7,17,16,00), new Date(2015,7,17,20,00), { url: '#' });
-timetable2.addEvent('ONNI ', 'Wintergarten', new Date(2015,7,17,11,00), new Date(2015,7,17,14,00), { url: '#' });
-timetable2.addEvent('SAMMY D ', 'Wintergarten', new Date(2015,7,17,0,00), new Date(2015,7,17,4,00), { url: '#' });
-timetable2.addEvent('TARA BROOKS ', 'Hammerhalle', new Date(2015,7,17,8,00), new Date(2015,7,17,12,00), { url: '#' });
-var renderer2 = new Timetable.Renderer(timetable2);
-renderer2.draw('.timetable');
+<div class="runningorder-column runningorder-column-meltstage"> <header class="runningorder-column-header"> <img src="./files/Melt_Stage.png" alt="" class="column-icon"> <h2 class="column-name" style="background-color: #e8412c;"> <span>Wintergarten</span> </h2> </header> <section class="runningorder-column-events"> <ul>
+<li style="top: 392px; height: 120px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>CHRISTIAN VOLDSTAD </h3> <div class="title-addon"></div> </a></li><li style="top: 216px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>FREDEVERYTHING </h3> <div class="title-addon"></div> </a></li><li style="top: 832px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>KANT </h3> <div class="title-addon"></div> </a></li><li style="top: 524px; height: 120px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>ONNI </h3> <div class="title-addon"></div> </a></li><li style="top: 40px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>SAMMY D </h3> <div class="title-addon"></div> </a></li>
+</ul></section></div><div class="runningorder-column runningorder-column-meltselektor"> <header class="runningorder-column-header"> <img src="./files/Meltselektor_C.png" alt="" class="column-icon"> <h2 class="column-name" style="background-color: #e8412c;"> <span>Hammerhalle</span> </h2> </header> <section class="runningorder-column-events"> <ul>
+<li style="top: 216px; height: 120px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>HACHE </h3> <div class="title-addon"></div> </a></li><li style="top: 744px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>MONTY </h3> <div class="title-addon"></div> </a></li><li style="top: 392px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>TARA BROOKS </h3> <div class="title-addon"></div> </a></li>
+</ul></section></div><div class="runningorder-column runningorder-column-bigwheel"> <header class="runningorder-column-header"> <img src="./files/Big_Wheel_C.png" alt="" class="column-icon"> <h2 class="column-name" style="background-color: #e8412c;"> <span>Dampfer</span> </h2> </header> <section class="runningorder-column-events"> <ul>
+<li style="top: 348px; height: 120px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>ESTHER DUIJN </h3> <div class="title-addon"></div> </a></li>
+</ul></section></div>

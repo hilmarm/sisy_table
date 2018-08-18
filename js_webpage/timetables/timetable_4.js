@@ -1,10 +1,5 @@
-var timetable4 = new Timetable();
-timetable4.setScope(0,23)
-timetable4.addLocations(['Wintergarten', 'Hammerhalle', 'Dampfer']);
-timetable4.addEvent('FIDELITY KASTROW ', 'Hammerhalle', new Date(2015,7,17,1,00), new Date(2015,7,17,5,00), { url: '#' });
-timetable4.addEvent('GORGE ', 'Wintergarten', new Date(2015,7,17,2,00), new Date(2015,7,17,6,00), { url: '#' });
-timetable4.addEvent('JAKOB SEIDENSTICKER &amp; MELINA ', 'Wintergarten', new Date(2015,7,17,22,00), new Date(2015,7,17,2,00), { url: '#' });
-timetable4.addEvent('OLIVER DEUTSCHMANN ', 'Hammerhalle', new Date(2015,7,17,21,00), new Date(2015,7,17,1,00), { url: '#' });
-timetable4.addEvent('SHLOMSEN ', 'Wintergarten', new Date(2015,7,17,6,00), new Date(2015,7,17,9,00), { url: '#' });
-var renderer4 = new Timetable.Renderer(timetable4);
-renderer4.draw('.timetable');
+<div class="runningorder-column runningorder-column-meltstage"> <header class="runningorder-column-header"> <img src="./files/Melt_Stage.png" alt="" class="column-icon"> <h2 class="column-name" style="background-color: #e8412c;"> <span>Wintergarten</span> </h2> </header> <section class="runningorder-column-events"> <ul>
+<li style="top: 128px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>GORGE </h3> <div class="title-addon"></div> </a></li><li style="top: 40px; height: 80px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>JAKOB SEIDENSTICKER &amp; MELINA </h3> <div class="title-addon"></div> </a></li><li style="top: 304px; height: 120px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>SHLOMSEN </h3> <div class="title-addon"></div> </a></li>
+</ul></section></div><div class="runningorder-column runningorder-column-meltselektor"> <header class="runningorder-column-header"> <img src="./files/Meltselektor_C.png" alt="" class="column-icon"> <h2 class="column-name" style="background-color: #e8412c;"> <span>Hammerhalle</span> </h2> </header> <section class="runningorder-column-events"> <ul>
+<li style="top: 84px; height: 160px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>FIDELITY KASTROW </h3> <div class="title-addon"></div> </a></li><li style="top: 40px; height: 40px;"> <a class="runningorder-event" style="background-color:#f49855;"> <h3>OLIVER DEUTSCHMANN </h3> <div class="title-addon"></div> </a></li>
+</ul></section></div>

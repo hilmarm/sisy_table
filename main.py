@@ -9,7 +9,7 @@ import random
 def main():
     # A = [[0,2], [1,3], [9,10], [4,8], [6,10], [2,6]]
 
-    my_input = 'input/program2018'
+    my_input = 'input/program20180820'
 
     pp = PP(my_input)
     pp.run()
